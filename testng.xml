@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="smc3VolumeTests">
+ <test name="LoginScreen" >
+    <classes>
+       <class name="tests.LoginTests" />
+       
+  </classes>
+</test>
+
+ <test name="OriginSection" >
+    <classes>
+       <class name="tests.OriginDetailsValidationTests" />
+       
+  </classes>
+</test>
+
+ <test name="DestinationSection" >
+    <classes>
+       <class name="tests.DestinationDetailsValidationTests" />
+  </classes>
+</test>
+
+<test name="ShipmentDetailsSection" >
+    <classes>
+       <class name="tests.ShipmentDetailsTests" />
+  </classes>
+</test>
+
+<test name="ItemDetailsSection" >
+    <classes>
+       <class name="tests.ItemDetailsTests" />
+  </classes>
+</test>
+
+<test name="AccessorialsSection" >
+    <classes>
+       <class name="tests.AccessorialsTest" />
+  </classes>
+</test>
+
+<test name="TotalWeightPackagingUnitsFunctionality" >
+    <classes>
+       <class name="tests.TotalWeightPackagingUnitsFunctionalTests" />
+  </classes>
+</test>
+
+<test name="ItemAdditionDeletion" >
+    <classes>
+       <class name="tests.ItemAddDeleteFunctionalityTests" />
+  </classes>
+</test>
+ 
+ 
+ <test name="Screen2Validation" >
+    <classes>
+       <class name="tests.ShipmentSummaryFunctionalTest" />
+  </classes>
+</test>
+</suite> <!-- Suite -->

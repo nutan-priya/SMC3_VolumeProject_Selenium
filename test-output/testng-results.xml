@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="114051" started-at="2019-01-07T12:39:39Z" finished-at="2019-01-07T12:41:33Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="114051" started-at="2019-01-07T12:39:39Z" finished-at="2019-01-07T12:41:33Z">
+      <class name="tests.ShipmentSummaryFunctionalTest">
+        <test-method status="PASS" signature="start()[pri:0, instance:tests.ShipmentSummaryFunctionalTest@57e1b0c]" name="start" is-config="true" duration-ms="11236" started-at="2019-01-07T12:39:39Z" finished-at="2019-01-07T12:39:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="getQuoteWithAllFieldBlank()[pri:1, instance:tests.ShipmentSummaryFunctionalTest@57e1b0c]" name="getQuoteWithAllFieldBlank" duration-ms="17399" started-at="2019-01-07T12:39:50Z" finished-at="2019-01-07T12:40:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getQuoteWithAllFieldBlank -->
+        <test-method status="PASS" signature="close()[pri:0, instance:tests.ShipmentSummaryFunctionalTest@57e1b0c]" name="close" is-config="true" duration-ms="170" started-at="2019-01-07T12:40:07Z" finished-at="2019-01-07T12:40:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method status="PASS" signature="start()[pri:0, instance:tests.ShipmentSummaryFunctionalTest@57e1b0c]" name="start" is-config="true" duration-ms="11362" started-at="2019-01-07T12:40:08Z" finished-at="2019-01-07T12:40:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="getQuoteFunctionalityTest()[pri:2, instance:tests.ShipmentSummaryFunctionalTest@57e1b0c]" name="getQuoteFunctionalityTest" duration-ms="73693" started-at="2019-01-07T12:40:19Z" finished-at="2019-01-07T12:41:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getQuoteFunctionalityTest -->
+        <test-method status="PASS" signature="close()[pri:0, instance:tests.ShipmentSummaryFunctionalTest@57e1b0c]" name="close" is-config="true" duration-ms="165" started-at="2019-01-07T12:41:33Z" finished-at="2019-01-07T12:41:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- tests.ShipmentSummaryFunctionalTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
