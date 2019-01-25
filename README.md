@@ -23,5 +23,5 @@ sh execute.sh
 
 8. Run command on root folder
 ```
-chmod +x execute.sh
+chmod +x execute.sh ExternalFiles/chromediver
 ```
