@@ -24,4 +24,5 @@ sh execute.sh
 8. Run command on root folder
 ```
 chmod +x execute.sh ExternalFiles/chromediver
+chmod 777 test-outout/ -Rf
 ```
