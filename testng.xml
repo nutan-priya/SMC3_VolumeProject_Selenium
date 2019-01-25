@@ -1,58 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="smc3VolumeTests">
- <test name="LoginScreen" >
+ <test name="LoginScreen" verbose="10">
     <classes>
        <class name="tests.LoginTests" />
        
   </classes>
 </test>
 
- <test name="OriginSection" >
+ <test name="OriginSection" verbose="10">
     <classes>
        <class name="tests.OriginDetailsValidationTests" />
        
   </classes>
 </test>
 
- <test name="DestinationSection" >
+ <test name="DestinationSection" verbose="10">
     <classes>
        <class name="tests.DestinationDetailsValidationTests" />
   </classes>
 </test>
 
-<test name="ShipmentDetailsSection" >
+<test name="ShipmentDetailsSection" verbose="10">
     <classes>
        <class name="tests.ShipmentDetailsTests" />
   </classes>
 </test>
 
-<test name="ItemDetailsSection" >
+<test name="ItemDetailsSection" verbose="10">
     <classes>
        <class name="tests.ItemDetailsTests" />
   </classes>
 </test>
 
-<test name="AccessorialsSection" >
+<test name="AccessorialsSection" verbose="10">
     <classes>
        <class name="tests.AccessorialsTest" />
   </classes>
 </test>
 
-<test name="TotalWeightPackagingUnitsFunctionality" >
+<test name="TotalWeightPackagingUnitsFunctionality" verbose="10">
     <classes>
        <class name="tests.TotalWeightPackagingUnitsFunctionalTests" />
   </classes>
 </test>
 
-<test name="ItemAdditionDeletion" >
+<test name="ItemAdditionDeletion" verbose="10">
     <classes>
        <class name="tests.ItemAddDeleteFunctionalityTests" />
   </classes>
 </test>
  
  
- <test name="Screen2Validation" >
+ <test name="Screen2Validation" verbose="10">
     <classes>
        <class name="tests.ShipmentSummaryFunctionalTest" />
   </classes>

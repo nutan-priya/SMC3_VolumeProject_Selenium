@@ -2,6 +2,7 @@ package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
@@ -22,8 +23,10 @@ public class LoginTests {
 	@BeforeMethod
 	public void start()
 	{
-		System.setProperty("webdriver.chrome.driver", "./ExternalFiles/"+"/chromedriver.exe");
-		driver=new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "./ExternalFiles/"+"/chromedriver");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		driver=new ChromeDriver(options);
 		driver.manage().window().maximize();
 		//loginToApplication=new Login(driver);
 	}

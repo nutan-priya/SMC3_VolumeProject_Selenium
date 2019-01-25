@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -37,8 +38,10 @@ public class ShipmentSummaryFunctionalTest {
 	@BeforeMethod
 	public void start()
 	{		
-		System.setProperty("webdriver.chrome.driver", "./ExternalFiles/"+"/chromedriver.exe");
-		driver=new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "./ExternalFiles/"+"/chromedriver");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
+		driver=new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.navigate().to(propertyValue.getValue("TestingURL"));
 		loginToApplication=new Login(driver);

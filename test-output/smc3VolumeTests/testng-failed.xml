@@ -1,18 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [smc3VolumeTests]">
+  <test thread-count="5" name="LoginScreen(failed)">
+    <classes>
+      <class name="tests.LoginTests">
+        <methods>
+          <include name="loginWithInValidCredential"/>
+          <include name="loginWithValidCarrierCredential"/>
+          <include name="start"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- tests.LoginTests -->
+    </classes>
+  </test> <!-- LoginScreen(failed) -->
+  <test thread-count="5" name="OriginSection(failed)">
+    <classes>
+      <class name="tests.OriginDetailsValidationTests">
+        <methods>
+          <include name="verifyCurrentDate"/>
+          <include name="start"/>
+          <include name="close"/>
+          <include name="originCityValidation"/>
+          <include name="originStateCountryValidation"/>
+          <include name="originZipValidation"/>
+        </methods>
+      </class> <!-- tests.OriginDetailsValidationTests -->
+    </classes>
+  </test> <!-- OriginSection(failed) -->
+  <test thread-count="5" name="DestinationSection(failed)">
+    <classes>
+      <class name="tests.DestinationDetailsValidationTests">
+        <methods>
+          <include name="start"/>
+          <include name="destinationZipValidation"/>
+          <include name="originCityValidation"/>
+          <include name="originStateCountryValidation"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- tests.DestinationDetailsValidationTests -->
+    </classes>
+  </test> <!-- DestinationSection(failed) -->
   <test thread-count="5" name="ShipmentDetailsSection(failed)">
     <classes>
       <class name="tests.ShipmentDetailsTests">
         <methods>
+          <include name="payerFieldValidation"/>
           <include name="close"/>
           <include name="start"/>
           <include name="validLinearFeetValidation"/>
           <include name="invalidLinearFeetValidation"/>
+          <include name="paymentTermsFieldValidation"/>
         </methods>
       </class> <!-- tests.ShipmentDetailsTests -->
     </classes>
   </test> <!-- ShipmentDetailsSection(failed) -->
+  <test thread-count="5" name="ItemDetailsSection(failed)">
+    <classes>
+      <class name="tests.ItemDetailsTests">
+        <methods>
+          <include name="validHeightFieldValidation"/>
+          <include name="classFieldValidation"/>
+          <include name="invalidQuantityFieldValidations"/>
+          <include name="invalidWidthFieldValidations"/>
+          <include name="validWidthFieldValidation"/>
+          <include name="start"/>
+          <include name="invalidWeightFieldValidations"/>
+          <include name="close"/>
+          <include name="invalidLengthFieldValidations"/>
+          <include name="validLengthFieldValidation"/>
+          <include name="invalidHeightFieldValidations"/>
+          <include name="validCommodityFieldValidation"/>
+          <include name="packagingTypeValidation"/>
+          <include name="stackableFieldValidation"/>
+          <include name="invalidCommodityFieldValidations"/>
+          <include name="validQuantityFieldValidation"/>
+          <include name="validWeightFieldValidation"/>
+        </methods>
+      </class> <!-- tests.ItemDetailsTests -->
+    </classes>
+  </test> <!-- ItemDetailsSection(failed) -->
+  <test thread-count="5" name="AccessorialsSection(failed)">
+    <classes>
+      <class name="tests.AccessorialsTest">
+        <methods>
+          <include name="close"/>
+          <include name="accessorialsCheckBoxValidation"/>
+          <include name="start"/>
+        </methods>
+      </class> <!-- tests.AccessorialsTest -->
+    </classes>
+  </test> <!-- AccessorialsSection(failed) -->
   <test thread-count="5" name="TotalWeightPackagingUnitsFunctionality(failed)">
     <classes>
       <class name="tests.TotalWeightPackagingUnitsFunctionalTests">
@@ -20,15 +97,31 @@
           <include name="start"/>
           <include name="close"/>
           <include name="totalShipmentWeightValidation"/>
+          <include name="totalPackagingUnitValidation"/>
         </methods>
       </class> <!-- tests.TotalWeightPackagingUnitsFunctionalTests -->
     </classes>
   </test> <!-- TotalWeightPackagingUnitsFunctionality(failed) -->
+  <test thread-count="5" name="ItemAdditionDeletion(failed)">
+    <classes>
+      <class name="tests.ItemAddDeleteFunctionalityTests">
+        <methods>
+          <include name="deleteItemFunctionality"/>
+          <include name="close"/>
+          <include name="clickAdd5times"/>
+          <include name="start"/>
+          <include name="verifyAddItemBtn"/>
+          <include name="clickAddItemOnce"/>
+        </methods>
+      </class> <!-- tests.ItemAddDeleteFunctionalityTests -->
+    </classes>
+  </test> <!-- ItemAdditionDeletion(failed) -->
   <test thread-count="5" name="Screen2Validation(failed)">
     <classes>
       <class name="tests.ShipmentSummaryFunctionalTest">
         <methods>
           <include name="start"/>
+          <include name="getQuoteFunctionalityTest"/>
           <include name="close"/>
           <include name="getQuoteWithAllFieldBlank"/>
         </methods>
