@@ -11,8 +11,7 @@
 2. Add source code in Advanced > Use custom workspace
 3. In build section. add build step as Execute Shell >
  ```
-cd /home/administrator/Desktop/Projects/SMC3_VolumeProject_Selenium/
-sh execute.sh
+./execute.sh
 ```
 4. Apply and Save.
 5. Go to Manage Jenkins > Configure Jenkins > Shell
