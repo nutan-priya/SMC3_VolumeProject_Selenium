@@ -29,10 +29,10 @@ public class ItemDetails {
 	By CommodityfieldErrorMessage= By.xpath("//span[contains(text(),'Please enter commodity description between 4-255 (char)')]");
 	public By AddItemBtn = By.id("addItemBtn");
 	public By DeleteItemBtn1=By.xpath("(//input[@id='deleteItem'])[1]");
-	public By DeleteItemBtn2=By.xpath("(//input[@id='deleteItem'])[2]");
-	public By DeleteItemBtn3=By.xpath("(//input[@id='deleteItem'])[3]");
-	public By DeleteItemBtn4=By.xpath("(//input[@id='deleteItem'])[4]");
-	public By DeleteItemBtn5=By.xpath("(//input[@id='deleteItem'])[5]");
+	public By DeleteItemBtn2=By.xpath("//input[@id='2']");
+	public By DeleteItemBtn3=By.xpath("//input[@id='3']");
+	public By DeleteItemBtn4=By.xpath("//input[@id='4']");
+	public By DeleteItemBtn5=By.xpath("//input[@id='5']");
 	public By Quantity1=By.name("vltl_itemqty_1");
 	public By Quantity2=By.name("vltl_itemqty_2");
 	public By Quantity3=By.name("vltl_itemqty_3");

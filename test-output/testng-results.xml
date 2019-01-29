@@ -1,37 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="114051" started-at="2019-01-07T12:39:39Z" finished-at="2019-01-07T12:41:33Z">
+  <suite name="Default suite" duration-ms="62930" started-at="2019-01-29T10:15:45Z" finished-at="2019-01-29T10:16:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="114051" started-at="2019-01-07T12:39:39Z" finished-at="2019-01-07T12:41:33Z">
-      <class name="tests.ShipmentSummaryFunctionalTest">
-        <test-method status="PASS" signature="start()[pri:0, instance:tests.ShipmentSummaryFunctionalTest@57e1b0c]" name="start" is-config="true" duration-ms="11236" started-at="2019-01-07T12:39:39Z" finished-at="2019-01-07T12:39:50Z">
+    <test name="Default test" duration-ms="62930" started-at="2019-01-29T10:15:45Z" finished-at="2019-01-29T10:16:48Z">
+      <class name="tests.TotalWeightPackagingUnitsFunctionalTests">
+        <test-method status="PASS" signature="start()[pri:0, instance:tests.TotalWeightPackagingUnitsFunctionalTests@57e1b0c]" name="start" is-config="true" duration-ms="23653" started-at="2019-01-29T10:15:45Z" finished-at="2019-01-29T10:16:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method status="PASS" signature="getQuoteWithAllFieldBlank()[pri:1, instance:tests.ShipmentSummaryFunctionalTest@57e1b0c]" name="getQuoteWithAllFieldBlank" duration-ms="17399" started-at="2019-01-07T12:39:50Z" finished-at="2019-01-07T12:40:07Z">
+        <test-method status="PASS" signature="totalPackagingUnitValidation()[pri:1, instance:tests.TotalWeightPackagingUnitsFunctionalTests@57e1b0c]" name="totalPackagingUnitValidation" duration-ms="22840" started-at="2019-01-29T10:16:09Z" finished-at="2019-01-29T10:16:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getQuoteWithAllFieldBlank -->
-        <test-method status="PASS" signature="close()[pri:0, instance:tests.ShipmentSummaryFunctionalTest@57e1b0c]" name="close" is-config="true" duration-ms="170" started-at="2019-01-07T12:40:07Z" finished-at="2019-01-07T12:40:08Z">
+        </test-method> <!-- totalPackagingUnitValidation -->
+        <test-method status="PASS" signature="close()[pri:0, instance:tests.TotalWeightPackagingUnitsFunctionalTests@57e1b0c]" name="close" is-config="true" duration-ms="153" started-at="2019-01-29T10:16:31Z" finished-at="2019-01-29T10:16:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-        <test-method status="PASS" signature="start()[pri:0, instance:tests.ShipmentSummaryFunctionalTest@57e1b0c]" name="start" is-config="true" duration-ms="11362" started-at="2019-01-07T12:40:08Z" finished-at="2019-01-07T12:40:19Z">
+        <test-method status="PASS" signature="start()[pri:0, instance:tests.TotalWeightPackagingUnitsFunctionalTests@57e1b0c]" name="start" is-config="true" duration-ms="10683" started-at="2019-01-29T10:16:32Z" finished-at="2019-01-29T10:16:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method status="PASS" signature="getQuoteFunctionalityTest()[pri:2, instance:tests.ShipmentSummaryFunctionalTest@57e1b0c]" name="getQuoteFunctionalityTest" duration-ms="73693" started-at="2019-01-07T12:40:19Z" finished-at="2019-01-07T12:41:33Z">
+        <test-method status="FAIL" signature="totalShipmentWeightValidation()[pri:2, instance:tests.TotalWeightPackagingUnitsFunctionalTests@57e1b0c]" name="totalShipmentWeightValidation" duration-ms="5416" started-at="2019-01-29T10:16:42Z" finished-at="2019-01-29T10:16:48Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [0] but found [3]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [0] but found [3]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at utilities.CommonFunctions.validationEquals(CommonFunctions.java:98)
+at tests.TotalWeightPackagingUnitsFunctionalTests.totalShipmentWeightValidation(TotalWeightPackagingUnitsFunctionalTests.java:95)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getQuoteFunctionalityTest -->
-        <test-method status="PASS" signature="close()[pri:0, instance:tests.ShipmentSummaryFunctionalTest@57e1b0c]" name="close" is-config="true" duration-ms="165" started-at="2019-01-07T12:41:33Z" finished-at="2019-01-07T12:41:33Z">
+        </test-method> <!-- totalShipmentWeightValidation -->
+        <test-method status="PASS" signature="close()[pri:0, instance:tests.TotalWeightPackagingUnitsFunctionalTests@57e1b0c]" name="close" is-config="true" duration-ms="151" started-at="2019-01-29T10:16:48Z" finished-at="2019-01-29T10:16:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- tests.ShipmentSummaryFunctionalTest -->
+      </class> <!-- tests.TotalWeightPackagingUnitsFunctionalTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

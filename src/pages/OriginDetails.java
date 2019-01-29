@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.Select;
 public class OriginDetails {
 
 	WebDriver driver;	
-	public 	By PickupDetailsHeader= By.xpath("//p[contains(text(),'Pickup Details')]");	
+	public static By PickupDetailsHeader= By.xpath("//p[contains(text(),'Pickup Details')]");	
 	By OriginZip= By.id("originZip");
 	By OriginCity=By.id("originCity");
 	By OriginState=By.id("originState");

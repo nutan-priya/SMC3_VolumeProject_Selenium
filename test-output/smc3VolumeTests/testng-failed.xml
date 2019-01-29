@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [smc3VolumeTests]">
-  <test thread-count="5" name="ShipmentDetailsSection(failed)">
-    <classes>
-      <class name="tests.ShipmentDetailsTests">
-        <methods>
-          <include name="close"/>
-          <include name="start"/>
-          <include name="validLinearFeetValidation"/>
-          <include name="invalidLinearFeetValidation"/>
-        </methods>
-      </class> <!-- tests.ShipmentDetailsTests -->
-    </classes>
-  </test> <!-- ShipmentDetailsSection(failed) -->
   <test thread-count="5" name="TotalWeightPackagingUnitsFunctionality(failed)">
     <classes>
       <class name="tests.TotalWeightPackagingUnitsFunctionalTests">
@@ -24,15 +12,4 @@
       </class> <!-- tests.TotalWeightPackagingUnitsFunctionalTests -->
     </classes>
   </test> <!-- TotalWeightPackagingUnitsFunctionality(failed) -->
-  <test thread-count="5" name="Screen2Validation(failed)">
-    <classes>
-      <class name="tests.ShipmentSummaryFunctionalTest">
-        <methods>
-          <include name="start"/>
-          <include name="close"/>
-          <include name="getQuoteWithAllFieldBlank"/>
-        </methods>
-      </class> <!-- tests.ShipmentSummaryFunctionalTest -->
-    </classes>
-  </test> <!-- Screen2Validation(failed) -->
 </suite> <!-- Failed suite [smc3VolumeTests] -->

@@ -143,7 +143,6 @@ public class ShipmentSummaryFunctionalTest {
 		String Height= itemDetails.getHeight();
 		String Dimension = Length+"*"+Width+"*"+Height;
 		System.out.println("The Dimension of the item is: " + Dimension);
-		System.out.println("Pass");
 		itemDetails.setWeight(propertyValue.getValue("validWeight1"));
 		itemDetails.setCommodity(propertyValue.getValue("validCommodity4char"));
 		System.out.println("Pass");

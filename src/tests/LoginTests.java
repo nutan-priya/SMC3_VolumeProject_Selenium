@@ -1,5 +1,6 @@
 package tests;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -10,6 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import pages.Login;
+import pages.OriginDetails;
 import utilities.ExceptionalHandlingFunctions;
 import utilities.PropertyFileUtility;
 public class LoginTests {
@@ -35,6 +37,9 @@ public class LoginTests {
 		loginToApplication=new Login(driver);
 		driver.navigate().to(propertyValue.getValue("TestingURL"));
 		loginToApplication.LoginToApplication(propertyValue.getValue("loginUserName"),propertyValue.getValue("loginPassword"));
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.findElement(OriginDetails.PickupDetailsHeader).isDisplayed());
+		System.out.println("Logged in successfully with valid credentials");
 	}catch (Exception e) {
 		System.out.println(e.getMessage());
 		Assert.fail();
@@ -51,6 +56,9 @@ public class LoginTests {
 		loginToApplication=new Login(driver);
 		driver.navigate().to(propertyValue.getValue("TestingURL"));		
 		loginToApplication.LoginToApplication(propertyValue.getValue("InvalidUsername"),propertyValue.getValue("InvalidPassword"));
+		Thread.sleep(3000);
+		Assert.assertTrue(driver.findElement(By.xpath("//div[contains(text(),'Invalid Email Address or Password. Please contact Technical Support ')]")).isDisplayed());
+		System.out.println("Not able to log in wth invalid credentials");
 
 		}catch (Exception e) {
 			System.out.println(e.getMessage());
