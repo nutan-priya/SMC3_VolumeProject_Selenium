@@ -204,7 +204,7 @@ public class ItemAddDeleteFunctionalityTests {
 		utilityfunctions.isDisplayedBy(itemDetails.DeleteItemBtn1, true);
 		utilityfunctions.isDisplayedBy(itemDetails.DeleteItemBtn2, true);
 		utilityfunctions.isDisplayedBy(itemDetails.DeleteItemBtn3, true);
-		utilityfunctions.isDisplayedBy(itemDetails.DeleteItemBtn4, true);
+		utilityfunctions.isDisplayedBy(itemDetails.DeleteItemBtn5, true);
 		
 		//Verified Add Item Button has got added. 
 		utilityfunctions.isElementDisplayed(driver.findElement(itemDetails.AddItemBtn));

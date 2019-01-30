@@ -94,33 +94,71 @@ public class TotalWeightPackagingUnitsFunctionalTests {
 		utilityfunctions.validationEquals("0", itemDetails.getTotalShipmentWeight());
 		System.out.println("Validated that, while launching the application, initially Total shipment weight is 0.");
 		
+		//Adding weight to 1st Item
 		itemDetails.setWeight1(propertyValue.getValue("weight1"));
-		utilityfunctions.validationEquals(propertyValue.getValue("weight1"), itemDetails.getTotalShipmentWeight());
+		utilityfunctions.validationEquals("0", itemDetails.getTotalShipmentWeight());
+		System.out.println("Weight is given for Item 1 , but as Quanity Field is Blank, Total Shipment weight is: " + itemDetails.getTotalShipmentWeight());
+		
+		//Adding Quantity 1
+		itemDetails.setQuantity1(propertyValue.getValue("quantity1"));
+		int item1Quantity= Integer.parseInt(propertyValue.getValue("quantity1"));
 		int item1Weight= Integer.parseInt(propertyValue.getValue("weight1"));
+		int Item1QuantityWeightMultiplied= utilityfunctions.multiply(item1Quantity, item1Weight);
+		String totalShipmentWeight = Integer.toString(Item1QuantityWeightMultiplied);
+		utilityfunctions.validationEquals(totalShipmentWeight, itemDetails.getTotalShipmentWeight());
+		System.out.println("Total Shipment Weight is total no of Quantiy multiplied with total no of Weight in 1st Item.");
+		
+		//Adding 2nd Item Weight and Quantity
 		itemDetails.clickAdditemBtn();
+		itemDetails.setQuantity2(propertyValue.getValue("quantity2"));
 		itemDetails.setWeight2(propertyValue.getValue("weight2"));
+		int item2Quantity= Integer.parseInt(propertyValue.getValue("quantity2"));
 		int item2Weight=Integer.parseInt(propertyValue.getValue("weight2"));
-		int shipmentWeight= utilityfunctions.add(item1Weight, item2Weight);
-		String totalShipmentWeight = Integer.toString(shipmentWeight);
+		int Item2quantityWeightMultiplied= utilityfunctions.multiply(item2Quantity, item2Weight);
+		
+		int shipmentWeight= utilityfunctions.add(Item1QuantityWeightMultiplied, Item2quantityWeightMultiplied);
+		totalShipmentWeight = Integer.toString(shipmentWeight);
 		utilityfunctions.validationEquals(totalShipmentWeight, itemDetails.getTotalShipmentWeight());
+		System.out.println("Total Shipment Weight is sum of total no of Quantiy multiplied with total no of Weight in 1st Item and  2nd item.");
+		
+		//Adding 3rd Item Weight and Quantity
 		itemDetails.clickAdditemBtn();
+		itemDetails.setQuantity3(propertyValue.getValue("quantity3"));
 		itemDetails.setWeight3(propertyValue.getValue("weight3"));
+		int item3Quantity= Integer.parseInt(propertyValue.getValue("quantity3"));
 		int item3Weight=Integer.parseInt(propertyValue.getValue("weight3"));
-		shipmentWeight = (utilityfunctions.add(shipmentWeight, item3Weight));
+		int Item3quantityWeightMultiplied= utilityfunctions.multiply(item3Quantity, item3Weight);
+		
+		shipmentWeight= utilityfunctions.add(shipmentWeight, Item3quantityWeightMultiplied);
 		totalShipmentWeight = Integer.toString(shipmentWeight);
 		utilityfunctions.validationEquals(totalShipmentWeight, itemDetails.getTotalShipmentWeight());
+		System.out.println("Total Shipment Weight is sum of total no of Quantiy multiplied with total no of Weight in 1st Item, 2nd item, 3rd Item.");
+		
+		//Adding 4th Item Weight and Quantity
 		itemDetails.clickAdditemBtn();
+		itemDetails.setQuantity4(propertyValue.getValue("quantity4"));
 		itemDetails.setWeight4(propertyValue.getValue("weight4"));
+		int item4Quantity= Integer.parseInt(propertyValue.getValue("quantity4"));
 		int item4Weight=Integer.parseInt(propertyValue.getValue("weight4"));
-		shipmentWeight = (utilityfunctions.add(shipmentWeight, item4Weight));
+		int Item4quantityWeightMultiplied= utilityfunctions.multiply(item4Quantity, item4Weight);
+		
+		shipmentWeight= utilityfunctions.add(shipmentWeight, Item4quantityWeightMultiplied);
 		totalShipmentWeight = Integer.toString(shipmentWeight);
 		utilityfunctions.validationEquals(totalShipmentWeight, itemDetails.getTotalShipmentWeight());
+		System.out.println("Total Shipment Weight is sum of total no of Quantiy multiplied with total no of Weight in 1st Item, 2nd item, 3rd Item, 4th Item.");
+		
+		//Adding 4th Item Weight and Quantity
 		itemDetails.clickAdditemBtn();
+		itemDetails.setQuantity5(propertyValue.getValue("quantity5"));
 		itemDetails.setWeight5(propertyValue.getValue("weight5"));
+		int item5Quantity= Integer.parseInt(propertyValue.getValue("quantity5"));
 		int item5Weight=Integer.parseInt(propertyValue.getValue("weight5"));
-		shipmentWeight = (utilityfunctions.add(shipmentWeight, item5Weight));
+		int Item5quantityWeightMultiplied= utilityfunctions.multiply(item5Quantity, item5Weight);
+		
+		shipmentWeight= utilityfunctions.add(shipmentWeight, Item5quantityWeightMultiplied);
 		totalShipmentWeight = Integer.toString(shipmentWeight);
 		utilityfunctions.validationEquals(totalShipmentWeight, itemDetails.getTotalShipmentWeight());
+		System.out.println("Total Shipment Weight is sum of total no of Quantiy multiplied with total no of Weight in 1st Item, 2nd item, 3rd Item, 4th Item and 5th item.");
 		System.out.println("Total Shipment Weight: " + itemDetails.getTotalShipmentWeight());
 	
 		}catch (Exception e) {
