@@ -155,7 +155,7 @@ public class ShipmentSummaryFunctionalTest {
 		String totalShipmentWeight= itemDetails.getTotalShipmentWeight();
 		
 		shipmentSummary.GetQuote();
-		Thread.sleep(16000);
+		Thread.sleep(25000);
 		
 		//Verifying all the sections in Screen2, whether the data provided in screen 1 are reflected in screen 2 or not.
 		utilityfunctions.isElementDisplayed(driver.findElement(shipmentSummary.ShipmentSummaryHeader));

@@ -89,7 +89,7 @@ public class ShipmentDetails {
 	
 	public String getTotalLinearFeet()
 	{
-		return driver.findElement(TotalLinearFeet).getText();
+		return driver.findElement(TotalLinearFeet).getAttribute("value");
 	}
 	
 	public WebElement getLengthLinearFtErrorMessage()

@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [smc3VolumeTests]">
-  <test thread-count="5" name="TotalWeightPackagingUnitsFunctionality(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.TotalWeightPackagingUnitsFunctionalTests">
+      <class name="tests.DestinationDetailsValidationTests">
         <methods>
           <include name="start"/>
+          <include name="destinationZipValidation"/>
+          <include name="originCityValidation"/>
+          <include name="originStateCountryValidation"/>
           <include name="close"/>
-          <include name="totalShipmentWeightValidation"/>
-          <include name="totalPackagingUnitValidation"/>
         </methods>
-      </class> <!-- tests.TotalWeightPackagingUnitsFunctionalTests -->
+      </class> <!-- tests.DestinationDetailsValidationTests -->
     </classes>
-  </test> <!-- TotalWeightPackagingUnitsFunctionality(failed) -->
-  <test thread-count="5" name="ItemAdditionDeletion(failed)">
-    <classes>
-      <class name="tests.ItemAddDeleteFunctionalityTests">
-        <methods>
-          <include name="deleteItemFunctionality"/>
-          <include name="close"/>
-          <include name="start"/>
-        </methods>
-      </class> <!-- tests.ItemAddDeleteFunctionalityTests -->
-    </classes>
-  </test> <!-- ItemAdditionDeletion(failed) -->
-</suite> <!-- Failed suite [smc3VolumeTests] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

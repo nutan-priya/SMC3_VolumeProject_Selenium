@@ -19,12 +19,15 @@ public class ShipmentSummary {
 	public By carrierWithOutExceptionHeader =By.xpath("//p[contains(text(),'Carrier Quotes Without Exceptions')]");
 	public By carrierWithExceptionHeader =By.xpath("//p[contains(text(),'Carriers With Exceptions')]");
 	public By carrierNameUPSGroundFrght= By.xpath("//td[contains(text(),'UPS Ground Freight')]");
-	
-	
-	
-	
-	By GetQuoteBtn= By.xpath("//input[@value='Get Quote']");
 		
+	
+	public By GetQuoteBtn= By.xpath("//input[@value='Get Quote']");
+	public By editShipmentBtn =By.xpath("//input[@value='Edit Shipment']");
+	public By selectBtn = By.xpath("//input[@value='Select']");
+	public static By downloadPDF = By.xpath("//span[contains(text(),'Download PDF')]");
+	public static By popUpDialogTitle= By.xpath("//span[@class='ui-dialog-title']");
+	public static By cancelBtn= By.xpath("//span[contains(text(),'Cancel')]");
+	
 	public ShipmentSummary(WebDriver driver)
 	{
 		this.driver=driver;
@@ -37,6 +40,23 @@ public class ShipmentSummary {
 		Thread.sleep(10000);
 		
 	}
+	
+	public void clickEditShipment() throws Exception
+	{
+		driver.findElement(editShipmentBtn).click();
+		Thread.sleep(10000);		
+	}
+	
+	public void clickSelectBtn() throws Exception
+	{
+		driver.findElement(selectBtn).click();
+		Thread.sleep(10000);		
+	}
 
+	public void clickDownloadPDF() throws Exception
+	{
+		driver.findElement(downloadPDF).click();
+		Thread.sleep(10000);		
+	}
 }
 
