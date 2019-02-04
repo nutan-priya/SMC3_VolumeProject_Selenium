@@ -60,9 +60,4 @@
 
 
 
-<test name="PdfPopUp" verbose="10">
-    <classes>
-       <class name="tests.PdfTest" />
-  </classes>
-</test>
 </suite> <!-- Suite -->
