@@ -58,11 +58,7 @@
   </classes>
 </test>
 
-<test name="EditShipment" verbose="10">
-    <classes>
-       <class name="tests.EditShipmentFunctionality" />
-  </classes>
-</test>
+
 
 <test name="PdfPopUp" verbose="10">
     <classes>
