@@ -118,8 +118,7 @@ public class ShipmentSummaryFunctionalTest {
 		cityNamesList = originDetails.getOriginCity();
 		String selectOneOriginCity=utilityfunctions.splitFunction(cityNamesList, 1);
 		originDetails.setOriginCity(selectOneOriginCity);
-		String originState= originDetails.getOriginState();
-		String originCountry= originDetails.getOriginCountry();
+		String originStateID= propertyValue.getValue("OriginStateCode");
 		
 		destinationDetails.setDestinationZip(propertyValue.getValue("DestinationZip"));
 		Thread.sleep(2000);
@@ -127,8 +126,10 @@ public class ShipmentSummaryFunctionalTest {
 		cityNamesList = destinationDetails.getDestinationCity();
 		String selectOneDestinationCity=utilityfunctions.splitFunction(cityNamesList, 1);
 		destinationDetails.setDestinationCity(selectOneDestinationCity);
-		String destinationState = destinationDetails.getDestinationState();
-		String destinationCountry = destinationDetails.getDestinationCountry();
+		String destinationStateID= propertyValue.getValue("DestinationStateCode");
+		
+		String countryID= propertyValue.getValue("CountryID");
+		
 		String payerConsignee=shipmentDetails.setPayerConsignee();
 		String paymentPrepaid=shipmentDetails.setPaymentTermsPrepaid();
 		shipmentDetails.setTotalLinearFeet(propertyValue.getValue("validLinearFt1"));
@@ -149,7 +150,6 @@ public class ShipmentSummaryFunctionalTest {
 		System.out.println("Pass");
 		itemDetails.setWeight(propertyValue.getValue("validWeight1"));
 		itemDetails.setCommodity(propertyValue.getValue("validCommodity4char"));
-		System.out.println("Pass");
 		String Accessorials = accessorialDetails.setConstructionDelivery();
 		String totalPackagingUnit= itemDetails.getTotalPackagingUnit();
 		String totalShipmentWeight= itemDetails.getTotalShipmentWeight();
@@ -162,13 +162,13 @@ public class ShipmentSummaryFunctionalTest {
 		utilityfunctions.isElementDisplayed(driver.findElement(shipmentSummary.OriginHeader));
 		Assert.assertTrue(driver.findElement(By.xpath("//span[contains(text(),'"+originZip+"')]")).isDisplayed());	
 		Assert.assertTrue(driver.findElement(By.xpath("//span[contains(text(),'"+selectOneOriginCity+"')]")).isDisplayed());
-		Assert.assertTrue(driver.findElement(By.xpath("//span[contains(text(),'"+originState+"')]")).isDisplayed());
-		Assert.assertTrue(driver.findElement(By.xpath("//span[contains(text(),'"+originCountry+"')]")).isDisplayed());
+		Assert.assertTrue(driver.findElement(By.xpath("//span[contains(text(),'"+originStateID+"')]")).isDisplayed());
+		Assert.assertTrue(driver.findElement(By.xpath("//span[contains(text(),'"+countryID+"')]")).isDisplayed());
 		utilityfunctions.isElementDisplayed(driver.findElement(shipmentSummary.DestinationHeader));
 		Assert.assertTrue(driver.findElement(By.xpath("//span[contains(text(),'"+DestinationZip+"')]")).isDisplayed());	
 		Assert.assertTrue(driver.findElement(By.xpath("//span[contains(text(),'"+selectOneDestinationCity+"')]")).isDisplayed());
-		Assert.assertTrue(driver.findElement(By.xpath("//span[contains(text(),'"+destinationState+"')]")).isDisplayed());
-		Assert.assertTrue(driver.findElement(By.xpath("//span[contains(text(),'"+destinationCountry+"')]")).isDisplayed());
+		Assert.assertTrue(driver.findElement(By.xpath("//span[contains(text(),'"+destinationStateID+"')]")).isDisplayed());
+		Assert.assertTrue(driver.findElement(By.xpath("//span[contains(text(),'"+countryID+"')]")).isDisplayed());
 		utilityfunctions.isElementDisplayed(driver.findElement(shipmentSummary.PayerHeader));
 		Assert.assertTrue(driver.findElement(By.xpath("//span[contains(text(),'"+payerConsignee+"')]")).isDisplayed());
 		utilityfunctions.isElementDisplayed(driver.findElement(shipmentSummary.PaymentTermsHeader));

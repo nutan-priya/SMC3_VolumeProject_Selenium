@@ -51,7 +51,7 @@ public class EditShipmentFunctionality {
 	
 	//Test to verify Edit Shipment functionality.
 	@Test (priority=1)
-	public void getQuoteFunctionalityTest() throws Exception
+	public void editShipmentTest() throws Exception
 	{
 		
 		try {
